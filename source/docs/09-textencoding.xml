@@ -520,21 +520,12 @@
                   </list>
 
                   <p>Examples of the use of the <att>type</att> attribute within the <gi scheme="MEI">name</gi> element:</p>
-                  <!-- 
-                        <figure class="highlight">
-                           <pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;p&gt;</span>
-                  <span class="nt">&lt;name</span> <span class="na">type=</span><span class="s">"pers"</span><span
-                  class="nt">&gt;</span>Henry VIII, King of England<span
-                  class="nt">&lt;/name&gt;</span>
-                  <span class="nt">&lt;name</span> <span class="na">type=</span><span class="s">"corp"</span><span
-                  class="nt">&gt;</span>The Beatles<span class="nt">&lt;/name&gt;</span>
-                  <span class="nt">&lt;name</span> <span class="na">type=</span><span class="s">"place"</span><span
-                  class="nt">&gt;</span>Orbach<span class="nt">&lt;/name&gt;</span>
-                  <span class="nt">&lt;name</span> <span class="na">type=</span><span class="s">"process"</span><span
-                  class="nt">&gt;</span>OMR software<span class="nt">&lt;/name&gt;</span>
-               <span class="nt">&lt;/p&gt;</span></code></pre>
-                        </figure>
-                     -->
+                  <p>
+                     <figure>
+                        <head/>
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve"><xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="../examples/namesDates/namesDates-name_type.txt" parse="text"/></egXML>
+                     </figure>
+                  </p>
                   <p>The date sub-element is available within <gi scheme="MEI">name</gi> in order to
                      record any dates associated with the name, for example, creation and
                      dissolution in the case of a corporate entity or place or birth and death dates
@@ -564,34 +555,22 @@
                         Organization names typically include some type of indicator or pattern or
                         words that help identify them as non-personal names.</p>
                      <p>The <gi scheme="MEI">corpName</gi> element is frequently used within the of
-                        an MEI document. It is typically found in the <gi scheme="MEI">
-                           respStmt</gi> element:</p>
-                     <!-- 
-                           <figure class="highlight">
-                              <pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;respStmt&gt;</span>
-                  <span class="nt">&lt;corpName&gt;</span>Library of Congress<span
-                     class="nt">&lt;/corpName&gt;</span>
-               <span class="nt">&lt;/respStmt&gt;</span></code></pre>
-                           </figure>
-                           -->
+                        an MEI document. It is typically found in the <gi scheme="MEI">respStmt</gi> element:</p>
+                     <p>
+                        <figure>
+                           <head/>
+                           <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve"><xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="../examples/namesDates/namesDates-corpName1.txt" parse="text"/></egXML>
+                        </figure>
+                     </p>
                      <p>It may also be used wherever it is necessary to mark a corporate name,
                         for example when a corporation is responsible for a certain event in the
                         history of a musical work:</p>
-                     <!-- 
-                           <figure class="highlight">
-                              <pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;history&gt;</span>
-                  <span class="nt">&lt;eventList&gt;</span>
-                     <span class="nt">&lt;event&gt;</span>
-                        <span class="nt">&lt;p&gt;</span>First performance by
-                           <span class="nt">&lt;corpName&gt;</span>The Boston Symphony Orchestra<span
-                     class="nt">&lt;/corpName&gt;</span>,
-                           <span class="nt">&lt;date&gt;</span>October 22, 1881<span class="nt">&lt;/date&gt;</span>.
-                        <span class="nt">&lt;/p&gt;</span>
-                     <span class="nt">&lt;/event&gt;</span>
-                  <span class="nt">&lt;/eventList&gt;</span>
-               <span class="nt">&lt;/history&gt;</span></code></pre>
-                           </figure>
-                        -->
+                     <p>
+                        <figure>
+                           <head/>
+                           <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve"><xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="../examples/namesDates/namesDates-corpName2.txt" parse="text"/></egXML>
+                        </figure>
+                     </p>
                      <p>When it is necessary to provide structure for a name, the separate parts of
                         the name may be encoded in <gi scheme="MEI">corpName</gi> sub-elements, for
                         example:</p>
