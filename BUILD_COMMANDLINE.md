@@ -11,7 +11,7 @@
    |Verovio Toolkit|4.2.1|
    |Prince XML|15.3|
    |Saxon HE*|12.5|
-   |TEI Stylesheets*|7.57.0|
+   |TEI Stylesheets*|7.57.1|
    |Xerces*|Synchrosoft patched version 26.1.0.1|
 
    \* automatically pulled during build execution
