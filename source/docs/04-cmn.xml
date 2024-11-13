@@ -238,7 +238,7 @@
                      <p>
                         <figure>
                            <head>Alternating meters in Tchaikovsky's String Quartet in F major</head>
-                           <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="verovio code" xml:space="preserve"><xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="../examples/verovio/Tchaikovsky_scherzo.mei" parse="text"/></egXML>
+                           <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="verovio code" xml:space="preserve"><xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="../examples/verovio/tchaikovsky_scherzo.mei" parse="text"/></egXML>
                         </figure>
                      </p>
                </div>
