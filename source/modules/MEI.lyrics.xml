@@ -87,9 +87,7 @@
       </rng:zeroOrMore>
     </content>
     <remarks xml:lang="en">
-      <p>The <gi scheme="MEI">lb</gi> element is allowed here in order to facilitate karaoke
-        applications. The <att>func</att> attribute on <gi scheme="MEI">lb</gi> may be used to
-        distinguish true line endings from those of line groups for these applications.</p>
+      <p>The <gi scheme="MEI">lb</gi> element is allowed here in order to facilitate karaoke applications.</p>
     </remarks>
   </elementSpec>
   <elementSpec ident="verse" module="MEI.lyrics">
