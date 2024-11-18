@@ -112,7 +112,7 @@
         <antcall target="echo-properties"/>
     </target>
 
-    <target name="clean" description="Deletes the following directories: `build`, `dist` and `temp`.">
+    <target name="clean" description="Deletes the following directories: `build`, `dist` and `temp`." depends="info">
         <delete dir="build"/>
         <delete dir="dist"/>
         <delete dir="temp"/>
@@ -150,12 +150,17 @@
         <echo>Local github.branch: ${github.branch.local}</echo>
     </target>
 
-    <target name="reset" description="Resets the build environment. Same as `clean`, but additionally deletes the `lib` directory with the TEI Stylesheets and the jar files.">
-        <delete dir="lib"/>
+    <target name="reset" description="Resets the build environment. Same as `clean`, but additionally deletes the `lib` directory with the jar files.">
         <antcall target="clean"/>
+        <delete dir="lib"/>
+    </target>
+
+    <target name="info" description="Displays the versions of Ant and Java (JDK).">
+        <echo>Ant version: ${ant.version}</echo>
+        <echo>Java version (JDK): ${ant.java.version}</echo>
     </target>
     
-    <target name="init" description="Initializes the build environment, i.e., checks if TEI Stylesheets, Saxon, Xerces and Schematron are available, and if not, it downloads everything into the `lib` folder. Checks if Prince is available.">
+    <target name="init" description="Initializes the build environment, i.e., checks if TEI Stylesheets, Saxon, Xerces and Schematron are available, and if not, it downloads everything into the `lib` folder. Checks if Prince is available." depends="info">
         <!-- check if Xerces is available -->
         <condition property="xerces-available">
             <or>
