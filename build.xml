@@ -301,7 +301,7 @@
             </fileset>
         </schematron>
         <property name="validate-source.done" value="true"/>
-        <echo>source validated: ${validate-source.done}</echo>
+        <echo>canonicalized source validated: ${validate-source.done}</echo>
     </target>
 
     <target name="build-compiled-odd" description="Builds the compiled ODD of a specific customization submitted as absolute path with -Dcustomization.path input param." depends="validate-source">
