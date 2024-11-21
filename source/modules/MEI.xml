@@ -1672,7 +1672,7 @@
     <content>
       <rng:choice>
         <rng:data type="token">
-          <rng:param name="pattern">[AdMmP][0-9]+</rng:param>
+          <rng:param name="pattern">[AdMmP][1-9][0-9]*</rng:param>
         </rng:data>
       </rng:choice>
     </content>
