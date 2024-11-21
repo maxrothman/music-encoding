@@ -1668,7 +1668,7 @@
     </content>
   </macroSpec>-->
   <macroSpec ident="data.INTERVAL.HARMONIC" module="MEI" type="dt">
-    <desc xml:lang="en">A token indicating diatonic interval quality and size.</desc>
+    <desc xml:lang="en">A token indicating diatonic interval quality and size in shorthand notation.</desc>
     <content>
       <rng:choice>
         <rng:data type="token">
@@ -1676,6 +1676,23 @@
         </rng:data>
       </rng:choice>
     </content>
+    <remarks xml:lang="en">
+      <p>
+        <list>
+          <head>Interval quality and size:</head>
+          <item>
+            <list>
+              <item>A = augmented,</item>
+              <item>d = diminished,</item>
+              <item>M = major,</item>
+              <item>m = minor,</item>
+              <item>P = perfect</item>
+            </list>
+          </item>
+          <item>integer value</item>
+        </list>
+      </p>
+    </remarks>
   </macroSpec>
   <macroSpec ident="data.INTERVAL.MELODIC" module="MEI" type="dt">
     <desc xml:lang="en">A token indicating direction of the interval but not its precise value, a diatonic
