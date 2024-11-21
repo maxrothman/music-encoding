@@ -1679,17 +1679,12 @@
     <remarks xml:lang="en">
       <p>
         <list>
-          <head>Interval quality and size:</head>
-          <item>
-            <list>
-              <item>A = augmented,</item>
-              <item>d = diminished,</item>
-              <item>M = major,</item>
-              <item>m = minor,</item>
-              <item>P = perfect</item>
-            </list>
-          </item>
-          <item>integer value</item>
+          <head>Interval qualities:</head>
+          <item>A = augmented,</item>
+          <item>d = diminished,</item>
+          <item>M = major,</item>
+          <item>m = minor,</item>
+          <item>P = perfect</item>
         </list>
       </p>
     </remarks>
