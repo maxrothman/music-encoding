@@ -18,6 +18,9 @@
   CONTACT: info@music-encoding.org
 -->
 <project name="music-encoding" default="dist" xmlns:if="ant:if" xmlns:unless="ant:unless">
+    <!-- import version properties -->
+    <property file="build.properties"/>
+    
     <property environment="env">
         <!-- set environment variable -->
     </property>
@@ -61,34 +64,32 @@
             <os family="windows"/>
         </not>
     </condition>
-    <property name="meiversion.latest" value="5.0"/>
-    <property name="meiversion.next" value="5.1-dev"/>
+    <condition property="verbose" value="true" else="false">
+        <contains string="${sun.java.command}" substring="-v" />
+    </condition>
+    <!-- directories -->
     <property name="dir.build" value="build"/>
+    <property name="dir.dist" value="dist"/>
+    <property name="dir.lib" value="lib"/>
+    <property name="dir.validation" value="source/validation"/>
+    <property name="dir.dist.guidelines" value="${dir.dist}/guidelines/web"/>
+    <property name="dir.dist.schemata" location="${dir.dist}/schemata/"/>
+    <property name="dir.lib.saxon" value="${dir.lib}/saxon"/>
+    <property name="dir.lib.schematron" value="${dir.lib}/schematron"/>
+    <property name="dir.lib.stylesheets" value="${dir.lib}/stylesheets"/>
+    <property name="dir.lib.xerces" value="${dir.lib}/xerces"/>
+    <!-- canonicalization -->
     <property name="canonicalized.file.prefix" value="mei-source_canonicalized_v"/>
     <property name="canonicalized.file.latest" value="${canonicalized.file.prefix}${meiversion.latest}.xml"/>
     <property name="canonicalized.file.next" value="${canonicalized.file.prefix}${meiversion.next}.xml"/>
     <property name="canonicalized.source.path" value="${dir.build}/${canonicalized.file.next}"/>
     <property name="canonicalized.source.path.cross_platform" value="${basedir.cross_platform}/${canonicalized.source.path}"/>
-    <property name="dir.dist" value="dist"/>
-    <property name="dir.dist.guidelines" value="${dir.dist}/guidelines/web"/>
-    <property name="dir.dist.schemata" location="${dir.dist}/schemata/"/>
-    <property name="dir.lib" value="lib"/>
-    <property name="dir.lib.saxon" value="${dir.lib}/saxon"/>
-    <property name="dir.lib.schematron" value="${dir.lib}/schematron"/>
-    <property name="dir.lib.stylesheets" value="${dir.lib}/stylesheets"/>
-    <property name="dir.lib.xerces" value="${dir.lib}/xerces"/>
-    <property name="dir.validation" value="source/validation"/>
-    <property name="saxon.version" value="SaxonHE12-5"/>
-    <property name="saxon.jar.file" value="saxon-he-12.5.jar"/>
-    <property name="schematron.version" value="8.0.0"/>
-    <property name="schematron.jar.file" value="ph-schematron-ant-task-${schematron.version}-jar-with-dependencies.jar"/>
-    <property name="stylesheets.version" value="7.57.1"/>
-    <property name="xerces.version" value="26.1.0.1"/>
-    <property name="xerces.jar.file" value="oxygen-patched-xerces-${xerces.version}.jar"/>
+    <!-- jar dependencies -->
     <property name="oxygen.basic.utilites.jar.file" value="oxygen-basic-utilities-${xerces.version}.jar"/>
-    <condition property="verbose" value="true" else="false">
-        <contains string="${sun.java.command}" substring="-v" />
-    </condition>
+    <property name="saxon.jar.file" value="saxon-he-${saxon.version}.jar"/>
+    <property name="schematron.jar.file" value="ph-schematron-ant-task-${schematron.version}-jar-with-dependencies.jar"/>
+    <property name="xerces.jar.file" value="oxygen-patched-xerces-${xerces.version}.jar"/>
+    
 
     <target name="help">
         <antcall target="echo-mei"/>
@@ -111,7 +112,7 @@
         <antcall target="echo-properties"/>
     </target>
 
-    <target name="clean" description="Deletes the following directories: `build`, `dist` and `temp`.">
+    <target name="clean" description="Deletes the following directories: `build`, `dist` and `temp`." depends="info">
         <delete dir="build"/>
         <delete dir="dist"/>
         <delete dir="temp"/>
@@ -149,12 +150,17 @@
         <echo>Local github.branch: ${github.branch.local}</echo>
     </target>
 
-    <target name="reset" description="Resets the build environment. Same as `clean`, but additionally deletes the `lib` directory with the TEI Stylesheets and the jar files.">
-        <delete dir="lib"/>
+    <target name="reset" description="Resets the build environment. Same as `clean`, but additionally deletes the `lib` directory with the jar files.">
         <antcall target="clean"/>
+        <delete dir="lib"/>
+    </target>
+
+    <target name="info" description="Displays the versions of Ant and Java (JDK).">
+        <echo>Ant version: ${ant.version}</echo>
+        <echo>Java version (JDK): ${ant.java.version}</echo>
     </target>
     
-    <target name="init" description="Initializes the build environment, i.e., checks if TEI Stylesheets, Saxon, Xerces and Schematron are available, and if not, it downloads everything into the `lib` folder. Checks if Prince is available.">
+    <target name="init" description="Initializes the build environment, i.e., checks if TEI Stylesheets, Saxon, Xerces and Schematron are available, and if not, it downloads everything into the `lib` folder. Checks if Prince is available." depends="info">
         <!-- check if Xerces is available -->
         <condition property="xerces-available">
             <or>
@@ -214,7 +220,7 @@
 
     <target name="saxon-download" unless="${saxon-available}">
         <mkdir dir="temp"/>
-        <get src="https://github.com/Saxonica/Saxon-HE/releases/download/${saxon.version}/${saxon.version}J.zip" dest="temp/download"/>
+        <get src="https://github.com/Saxonica/Saxon-HE/releases/download/${saxon.edition.version}/${saxon.edition.version}J.zip" dest="temp/download"/>
     </target>
 
     <target name="saxon-prepare" depends="saxon-unzip" unless="${saxon-available}">
@@ -295,7 +301,7 @@
             </fileset>
         </schematron>
         <property name="validate-source.done" value="true"/>
-        <echo>source validated: ${validate-source.done}</echo>
+        <echo>canonicalized source validated: ${validate-source.done}</echo>
     </target>
 
     <target name="build-compiled-odd" description="Builds the compiled ODD of a specific customization submitted as absolute path with -Dcustomization.path input param." depends="validate-source">
