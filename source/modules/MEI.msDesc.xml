@@ -541,7 +541,7 @@
       <rng:ref name="macro.struc-unstrucContent"/>
     </content>
     <attList>
-      <attDef ident="func">
+      <attDef ident="func" usage="opt">
         <valList type="closed">
           <valItem ident="initial">
             <desc xml:lang="en">Signals beginning of a text division.</desc>

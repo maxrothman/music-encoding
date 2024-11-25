@@ -95,7 +95,7 @@
   <classSpec ident="att.attacking" module="MEI.gestural" type="atts">
     <desc xml:lang="en">Attributes whether an element is performed "attacca".</desc>
     <attList>
-      <attDef ident="attacca">
+      <attDef ident="attacca" usage="opt">
         <desc xml:lang="en">Indicates that the performance of the next musical division should begin immediately
           following this one.</desc>
         <datatype>
