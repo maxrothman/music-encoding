@@ -682,7 +682,7 @@
           <rng:data type="nonNegativeInteger"/>
         </datatype>
       </attDef>
-      <attDef ident="rotate">
+      <attDef ident="rotate" usage="opt">
         <desc xml:lang="en">
           Indicates the amount by which the contents of this element have been rotated clockwise or, if applicable, how the orientation of
           the element self should be interpreted, with respect to the normal orientation of the parent surface.
@@ -3101,21 +3101,21 @@
   <classSpec ident="att.staffItems" module="MEI.shared" type="atts">
     <desc xml:lang="en">Attributes that describe items printed near (above, below, or between) staves</desc>
     <attList>
-      <attDef ident="aboveorder">
+      <attDef ident="aboveorder" usage="opt">
         <desc xml:lang="en">Describes vertical order of items printed above a staff, from closest to farthest away
           from the staff.</desc>
         <datatype maxOccurs="unbounded">
           <rng:ref name="data.STAFFITEM"/>
         </datatype>
       </attDef>
-      <attDef ident="beloworder">
+      <attDef ident="beloworder" usage="opt">
         <desc xml:lang="en">Describes vertical order of items printed below a staff, from closest to farthest away
           from the staff.</desc>
         <datatype maxOccurs="unbounded">
           <rng:ref name="data.STAFFITEM"/>
         </datatype>
       </attDef>
-      <attDef ident="betweenorder">
+      <attDef ident="betweenorder" usage="opt">
         <desc xml:lang="en">Describes vertical order of items printed between staves, from top to bottom.</desc>
         <datatype maxOccurs="unbounded">
           <rng:ref name="data.STAFFITEM"/>
@@ -3421,7 +3421,7 @@
       <memberOf key="att.timestamp2.log"/>
     </classes>
     <attList>
-      <attDef ident="func">
+      <attDef ident="func" usage="opt">
         <desc xml:lang="en">Records the function of a tempo indication.</desc>
         <valList type="closed">
           <valItem ident="continuous">
