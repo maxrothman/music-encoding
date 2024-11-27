@@ -1903,22 +1903,22 @@
         <desc xml:lang="en">Specifies a generic MEI version label.</desc>
         <valList type="closed">
           <valItem ident="5.1-dev">
-            <desc xml:lang="en">Development version</desc>
+            <desc xml:lang="en">Version of MEI</desc>
           </valItem>
           <valItem ident="5.1-dev+anyStart">
-            <desc>Development version for MEI all_anyStart customization</desc>
+            <desc>Version of MEI all_anyStart customization</desc>
           </valItem>
           <valItem ident="5.1-dev+basic">
-              <desc>Development version for MEI basic customization</desc>
+              <desc>Version of MEI basic customization</desc>
           </valItem>
           <valItem ident="5.1-dev+CMN">
-            <desc>Development version for MEI CMN customization</desc>
+            <desc>Version of MEI cmn customization</desc>
           </valItem>
           <valItem ident="5.1-dev+Mensural">
-            <desc>Development version for MEI Mensural customization</desc>
+            <desc>Version of MEI mensural customization</desc>
           </valItem>
           <valItem ident="5.1-dev+Neumes">
-            <desc>Development version for MEI Neumes customization</desc>
+            <desc>Version of MEI neumes customization</desc>
           </valItem>
         </valList>
       </attDef>
