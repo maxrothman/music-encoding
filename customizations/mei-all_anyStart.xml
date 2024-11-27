@@ -170,6 +170,7 @@
           <attList>
             <attDef ident="meiversion" usage="rec" mode="change">
               <valList type="closed" mode="change">
+                <valItem ident="5.1-dev"/>
                 <valItem ident="5.1-dev+anyStart"/>
                 <valItem ident="5.1-dev+basic" mode="delete"/>
                 <valItem ident="5.1-dev+CMN" mode="delete"/>
