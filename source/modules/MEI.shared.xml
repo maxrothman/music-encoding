@@ -1898,6 +1898,14 @@
   </classSpec>
   <classSpec ident="att.meiVersion" module="MEI.shared" type="atts">
     <desc xml:lang="en">Attributes that record the version of MEI in use.</desc>
+    <constraintSpec ident="meiVersion.onlyRoot" scheme="schematron">
+      <desc>Prohibit meiversion attribute on non root elements.</desc>
+      <constraint>
+        <sch:rule context="/mei:*//*">
+          <sch:report test="@meiversion">The @meiversion attribute is not allowed on elements that are not the document root element.</sch:report>
+        </sch:rule>
+      </constraint>
+    </constraintSpec>
     <attList>
       <attDef ident="meiversion" usage="opt">
         <desc xml:lang="en">Specifies a generic MEI version label.</desc>
