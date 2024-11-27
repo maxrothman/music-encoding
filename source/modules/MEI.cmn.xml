@@ -1863,15 +1863,9 @@
       <memberOf key="model.meterSigLike"/>
     </classes>
     <content>
-      <rng:choice>
-        <rng:ref name="meterSig"/>
-        <rng:ref name="meterSigGrp"/>
-      </rng:choice>
+      <rng:ref name="model.meterSigLike"/>
       <rng:oneOrMore>
-        <rng:choice>
-          <rng:ref name="meterSig"/>
-          <rng:ref name="meterSigGrp"/>
-        </rng:choice>
+        <rng:ref name="model.meterSigLike"/>
       </rng:oneOrMore>
     </content>
   </elementSpec>
