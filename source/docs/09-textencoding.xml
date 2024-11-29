@@ -863,30 +863,29 @@
                         between them.” (Source: “Style”, Grove Music Online,
                         accessed: April 27, 2012)</p>
                      <p>The name of a musical style can be marked by the <gi scheme="MEI">styleName</gi> element, for example:</p>
-<!-- 
-                              <figure class="highlight">
-                                 <pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;styleName&gt;</span>bebop<span class="nt">&lt;/styleName&gt;</span></code></pre>
-                              </figure>
-
-                           <p>It may be, e.g., used for recording a style name within a title:</p>
-
-                              <figure class="highlight">
-                                 <pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;title&gt;</span>La voix du
-         <span class="nt">&lt;styleName&gt;</span>bebop<span class="nt">&lt;/styleName&gt;</span>
-      <span class="nt">&lt;/title&gt;</span></code></pre>
-                              </figure>
-
-                           <p>or to record a style of a certain epoch by using the <gi scheme="MEI">styleName</gi> sub-element:</p>
-
-                              <figure class="highlight">
-                                 <pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;periodName&gt;</span>Modern
-         <span class="nt">&lt;styleName&gt;</span>Jazz<span class="nt">&lt;/styleName&gt;</span>
-      <span class="nt">&lt;/periodName&gt;</span></code></pre>
-                              </figure>
--->
-                           <p>Musical forms and genres must be distinguished from musical style. Form and genre are typically indicated using the <gi scheme="MEI">classification</gi> element, described in chapter <ptr target="#metadata"/>.</p>
-                     </div>
+                     <p>
+                        <figure>
+                           <head/>
+                           <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve"><xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="../examples/namesDates/namesDates-styleName1.txt" parse="text"/></egXML>
+                        </figure>
+                     </p>
+                     <p>It may be, e.g., used for recording a style name within a title:</p>
+                     <p>
+                        <figure>
+                           <head/>
+                           <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve"><xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="../examples/namesDates/namesDates-styleName2.txt" parse="text"/></egXML>
+                        </figure>
+                     </p>
+                     <p>or to record a style of a certain epoch by using the <gi scheme="MEI">styleName</gi> sub-element:</p>
+                     <p>
+                        <figure>
+                           <head/>
+                           <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="code" xml:space="preserve"><xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="../examples/namesDates/namesDates-styleName3.txt" parse="text"/></egXML>
+                        </figure>
+                     </p>
+                     <p>Musical forms and genres must be distinguished from musical style. Form and genre are typically indicated using the <gi scheme="MEI">classification</gi> element, described in chapter <ptr target="#metadata"/>.</p>
                </div>
+            </div>
                <div xml:id="dates" type="div3">
                   <head>Dates</head>
                   <p>The <gi scheme="MEI">date</gi> element may be used to mark up portions of a text that denote a date.</p>
