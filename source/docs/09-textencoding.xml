@@ -472,7 +472,7 @@
                </div>
             </div>
             <div xml:id="sharedNames" type="div2">
-               <head>Names and Dates</head>
+               <head>Names</head>
                <p>The following section begins by discussing the elements provided for the encoding
                   of names (<gi scheme="MEI">name</gi>) in general and finishes by addressing more
                   specific elements for corporate names (<gi scheme="MEI">corpName</gi>), geographic
