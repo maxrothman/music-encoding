@@ -790,7 +790,6 @@
                            <specDesc key="foreName"/>
                            <specDesc key="genName"/>
                            <specDesc key="roleName"/>
-                           <specDesc key="model.nameLike"/>
                         </specList>
                      </p>
                      <p>For example,</p>
