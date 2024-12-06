@@ -532,7 +532,7 @@
                         <name>Library of Congress Name Authority File (LCNAF)</name>, may be recorded using the <att>auth</att> attribute.</p>
                   </div>
 
-                  <div xml:id="namesspecialized" type="div3">
+                  <div xml:id="namesspecialized" type="div4">
                      <head>Specialized Name Elements</head>
                      <p>In addition to the generic <gi scheme="MEI">name</gi> and <gi scheme="MEI">date</gi>
                         elements provided by the shared module, the 'MEI.namesdates' module provides
