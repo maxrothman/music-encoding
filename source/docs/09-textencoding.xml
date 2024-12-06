@@ -538,7 +538,7 @@
                         elements provided by the shared module, the 'MEI.namesdates' module provides
                         for the markup of the specialized cases described below.</p>
 
-                     <div xml:id="namesdatesCorpNames" type="div4">
+                     <div xml:id="namesdatesCorpNames" type="div5">
                         <head>Corporate Names</head>
                         <p>
                            <specList>
