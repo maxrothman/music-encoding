@@ -15,7 +15,7 @@
     <xsl:output method="html" indent="yes"/>
 
     <xsl:variable name="new.file" select="//tei:back" as="node()"/>
-    <xsl:variable name="new.version" select="//tei:attDef[@ident='meiversion']//tei:defaultVal" as="xs:string"/>
+    <xsl:variable name="new.version" select="tokenize(//tei:edition, ' ')[last()]" as="xs:string"/>
     <xsl:variable name="new.version.major" as="xs:string*">
         <xsl:choose>
             <xsl:when test="tokenize($new.version, '-')[2] = 'dev'">
@@ -31,7 +31,7 @@
 
     <xsl:param name="old.version.filename" select="''" as="xs:string"/>
     <xsl:variable name="old.file" select="doc($old.version.filename)//tei:back" as="node()"/>
-    <xsl:variable name="old.version" select="doc($old.version.filename)//tei:attDef[@ident='meiversion']//tei:defaultVal" as="xs:string"/>
+    <xsl:variable name="old.version" select="tokenize(doc($old.version.filename)//tei:edition, ' ')[last()]" as="xs:string"/>
     <xsl:variable name="old.version.major" select="concat('v',tokenize($old.version, '\.')[1])" as="xs:string"/>
 
     <xsl:variable name="html.guidelines" select="'https://music-encoding.org/guidelines/'"/>
