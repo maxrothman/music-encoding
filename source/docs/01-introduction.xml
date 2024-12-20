@@ -178,14 +178,18 @@
                      of this initiative.</p>
                </div>
                <div xml:id="aboutVersion" type="div3">
-                  <head>About version 5.0</head>
-                  <p>Release 5.0 of MEI focuses primarily on the guidelines, development infrastructure, 
-                     and consistency, with only limited changes to the specifications. Perhaps the most important 
-                     additions are the introduction of the MEI Basic customization, and the availability 
+                  <head>About version 5.1</head>
+                  <p>Following release 5.0 from September 2023, Release 5.1 of MEI focuses primarily on maintenance 
+                     fixes of the guidelines and the development infrastructure, and on consistency, with only 
+                     limited changes to the specifications. Perhaps the most important additions are the enhancements 
+                     for the MEI tablature module, notably adding support for German Lute Tablature (GLT). The Release 
+                     Managers for MEI 5.1 were the Technical Co-Chairs, Benjamin W. Bohl and Stefan Münnich.</p>
+                  <p>Release 5.0 of MEI also primarily focussed on these technical aspects of MEI. It's biggest 
+                     contributions were the introduction of the MEI Basic customization, and the availability 
                      of an auto-generated PDF version of the Guidelines (see below for more details on both).
-                     The Release Managers for MEI 5.0 were the Technical Co-Chairs, Benjamin W. Bohl and Stefan
-                     Münnich.
-                  </p>
+                     The Release Managers for MEI 5.0 were also Benjamin W. Bohl and Stefan Münnich.</p>
+                  <p>The following paragraphs provide an overview of all changes introduced with MEI version 5, 
+                     irrespective of the minor version.</p>
                   <div xml:id="meiBasic" type="div4">
                      <head>MEI Basic</head>
                      <p>As a framework to encode music, MEI offers extensive flexibility to encode music
@@ -236,7 +240,7 @@
                   </div>
                   <div xml:id="modelChanges" type="div4">
                      <head>Model changes in MEI</head>
-                     <p>MEI 5 introduces five new elements: <gi scheme="MEI">plica</gi> and 
+                     <p><hi rend="bold">MEI 5.0</hi> introduced five new elements: <gi scheme="MEI">plica</gi> and 
                      <gi scheme="MEI">stem</gi>, for the encoding of documents written in Mensural 
                      notation, and <gi scheme="MEI">divLine</gi> for Neumes documents. The new CMN 
                      element <gi scheme="MEI">repeatMark</gi> can be used to express repetition marks 
@@ -277,6 +281,31 @@
                      please check that the rules provided still work as expected under v5. A very helpful 
                      addition for this task may be the validation for MEI customizations, which is now 
                      available and used for all customizations officially provided by MEI.</p>
+                     <p>With <hi rend="bold">MEI 5.1</hi>, five additional elements have been added to the 
+                        schema: <gi scheme="MEI">tuning</gi>, <gi scheme="MEI">course</gi>, 
+                        <gi scheme="MEI">string</gi>, <gi scheme="MEI">tabDurSym</gi>, and 
+                        <gi scheme="MEI">tabGrp</gi>. All of these elements are used to encode tablature
+                     notation. The use of these elements, including relevant attributes, is documented in the
+                     largely rewritten chapter <ptr target="#tablature"/> of these Guidelines. The existing
+                        <ident type="class">att.stringtab.tuning</ident> attribute class has been deprecated
+                        in favor of these additions and will be removed from a future version of MEI.</p>
+                     <p>The new <ident type="class">att.dataSelecting</ident> class (currently available 
+                        only on <gi scheme="MEI">symbolDef</gi> introduces an XPath-based selection 
+                        mechanism to identify elements to which certain features apply. All controlevents
+                        (see <ptr target="#eventsControlevents"/>, technically implemented through membership in the
+                        <ident type="class">att.controlEvent</ident> class) are now member of 
+                        <ident type="class">att.color</ident>, making it possible to use the <att>color</att>
+                        attribute on them. Similarly, directive-like elements (<gi scheme="MEI">bend</gi>, 
+                        <gi scheme="MEI">breath</gi>, <gi scheme="MEI">caesura</gi>, <gi scheme="MEI">cpMark</gi>, 
+                        <gi scheme="MEI">fermata</gi>, <gi scheme="MEI">fing</gi>, <gi scheme="MEI">fingGrp</gi>, 
+                        <gi scheme="MEI">harm</gi>, <gi scheme="MEI">harpPedal</gi>, <gi scheme="MEI">metaMark</gi>, 
+                        <gi scheme="MEI">mordent</gi>, <gi scheme="MEI">octave</gi>, <gi scheme="MEI">ornam</gi>,
+                        <gi scheme="MEI">trill</gi>, and <gi scheme="MEI">turn</gi>) are now member of the
+                        <ident type="class">att.verticalGrp</ident> class, which gives them access to the <att>vgrp</att>
+                        attribute, which is used to align these elements vertically.</p>
+                     <p>Minor changes include the addition of <att>visible</att> an <att>enclose</att> on 
+                        <gi scheme="MEI">meterSigGrp</gi>. To see a full comparison of changes from MEI 5.0 to MEI 5.1.,
+                        please consider <ref target="https://github.com/music-encoding/music-encoding/compare/v5.0...v5.1">https://github.com/music-encoding/music-encoding/compare/v5.0...v5.1</ref></p>
                   </div>
                   <div xml:id="infrastructuralChanges" type="div4">
                      <head>Infrastructural changes</head>
