@@ -179,7 +179,7 @@
                </div>
                <div xml:id="aboutVersion" type="div3">
                   <head>About version 5.1</head>
-                  <p>Following release 5.0 from September 2023, Release 5.1 of MEI focuses primarily on maintenance 
+                  <p>Following release 5.0 from September 2023, release 5.1 of MEI focuses primarily on maintenance 
                      fixes of the guidelines and the development infrastructure, and on consistency, with only 
                      limited changes to the specifications. Perhaps the most important additions are the enhancements 
                      for the MEI tablature module, notably adding support for German Lute Tablature (GLT). The Release 
@@ -288,24 +288,23 @@
                      notation. The use of these elements, including relevant attributes, is documented in the
                      largely rewritten chapter <ptr target="#tablature"/> of these Guidelines. The existing
                         <ident type="class">att.stringtab.tuning</ident> attribute class has been deprecated
-                        in favor of these additions and will be removed from a future version of MEI.</p>
+                        in favor of these additions and will be removed in a future version of MEI.</p>
                      <p>The new <ident type="class">att.dataSelecting</ident> class (currently available 
-                        only on <gi scheme="MEI">symbolDef</gi> introduces an XPath-based selection 
+                        only on <gi scheme="MEI">symbolDef</gi>) introduces an XPath-based selection 
                         mechanism to identify elements to which certain features apply. All controlevents
                         (see <ptr target="#eventsControlevents"/>, technically implemented through membership in the
                         <ident type="class">att.controlEvent</ident> class) are now member of 
-                        <ident type="class">att.color</ident>, making it possible to use the <att>color</att>
-                        attribute on them. Similarly, directive-like elements (<gi scheme="MEI">bend</gi>, 
+                        <ident type="class">att.color</ident>, enabling color customization through the 
+                        <att>color</att> attribute.. Similarly, directive-like elements (<gi scheme="MEI">bend</gi>, 
                         <gi scheme="MEI">breath</gi>, <gi scheme="MEI">caesura</gi>, <gi scheme="MEI">cpMark</gi>, 
                         <gi scheme="MEI">fermata</gi>, <gi scheme="MEI">fing</gi>, <gi scheme="MEI">fingGrp</gi>, 
                         <gi scheme="MEI">harm</gi>, <gi scheme="MEI">harpPedal</gi>, <gi scheme="MEI">metaMark</gi>, 
                         <gi scheme="MEI">mordent</gi>, <gi scheme="MEI">octave</gi>, <gi scheme="MEI">ornam</gi>,
                         <gi scheme="MEI">trill</gi>, and <gi scheme="MEI">turn</gi>) are now member of the
-                        <ident type="class">att.verticalGrp</ident> class, which gives them access to the <att>vgrp</att>
-                        attribute, which is used to align these elements vertically.</p>
-                     <p>Minor changes include the addition of <att>visible</att> an <att>enclose</att> on 
-                        <gi scheme="MEI">meterSigGrp</gi>. To see a full comparison of changes from MEI 5.0 to MEI 5.1.,
-                        please consider <ref target="https://github.com/music-encoding/music-encoding/compare/v5.0...v5.1">https://github.com/music-encoding/music-encoding/compare/v5.0...v5.1</ref></p>
+                        <ident type="class">att.verticalGroup</ident> class, which gives them access to the <att>vgrp</att>
+                        attribute, facilitating vertical alignment.</p>
+                     <p>Minor changes include the addition of <att>visible</att> and <att>enclose</att> on 
+                        <gi scheme="MEI">meterSigGrp</gi>.</p>
                   </div>
                   <div xml:id="infrastructuralChanges" type="div4">
                      <head>Infrastructural changes</head>
