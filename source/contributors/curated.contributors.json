@@ -13,7 +13,7 @@
         "name": "Alastair Porter",
         "github": "https://github.com/alastair",
         "viaf": "",
-        "orcid": "",
+        "orcid": "https://orcid.org/0000-0001-8259-6028",
         "avatar": "https://avatars.githubusercontent.com/u/19217?v=4",
         "suppress":false
     },
@@ -168,6 +168,15 @@
         "viaf": "http://viaf.org/viaf/69035906",
         "orcid": "https://orcid.org/0000-0001-8897-2880",
         "avatar": "https://avatars.githubusercontent.com/u/10829937?v=4",
+        "suppress":false
+    },
+    {
+        "login": "janjusolja",
+        "name": "Olja Janjuš",
+        "github": "https://github.com/janjusolja",
+        "viaf": "http://viaf.org/viaf/24149233454276511312",
+        "orcid": "https://orcid.org/0009-0004-1498-495X",
+        "avatar": "https://avatars.githubusercontent.com/u/129741493?v=4",
         "suppress":false
     },
     {
