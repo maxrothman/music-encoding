@@ -1910,22 +1910,22 @@
       <attDef ident="meiversion" usage="opt">
         <desc xml:lang="en">Specifies a generic MEI version label.</desc>
         <valList type="closed">
-          <valItem ident="5.1-dev">
+          <valItem ident="5.1">
             <desc xml:lang="en">Version of MEI</desc>
           </valItem>
-          <valItem ident="5.1-dev+anyStart">
+          <valItem ident="5.1+anyStart">
             <desc>Version of MEI all_anyStart customization</desc>
           </valItem>
-          <valItem ident="5.1-dev+basic">
+          <valItem ident="5.1+basic">
               <desc>Version of MEI basic customization</desc>
           </valItem>
-          <valItem ident="5.1-dev+CMN">
+          <valItem ident="5.1+CMN">
             <desc>Version of MEI cmn customization</desc>
           </valItem>
-          <valItem ident="5.1-dev+Mensural">
+          <valItem ident="5.1+Mensural">
             <desc>Version of MEI mensural customization</desc>
           </valItem>
-          <valItem ident="5.1-dev+Neumes">
+          <valItem ident="5.1+Neumes">
             <desc>Version of MEI neumes customization</desc>
           </valItem>
         </valList>
@@ -2602,7 +2602,7 @@
           </datatype>
        </attDef>
     </attList>
-  </classSpec>   
+  </classSpec>
   <classSpec ident="att.placementRelEvent" module="MEI.shared" type="atts">
     <desc xml:lang="en">Attributes capturing placement information with respect to an event.</desc>
     <attList>

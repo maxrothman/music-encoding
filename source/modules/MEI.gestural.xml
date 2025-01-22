@@ -186,7 +186,7 @@
     <desc xml:lang="en">Gestural domain attributes.</desc>
   </classSpec>
   <classSpec ident="att.course.ges" module="MEI.gestural" type="atts">
-    <desc xml:lang="en">Gestural domain attributes.</desc>    
+    <desc xml:lang="en">Gestural domain attributes.</desc>
   </classSpec>
   <classSpec ident="att.cpMark.ges" module="MEI.gestural" type="atts">
     <desc xml:lang="en">Gestural domain attributes.</desc>
@@ -767,12 +767,12 @@
   </classSpec>
   <classSpec ident="att.tabDurSym.ges" module="MEI.gestural" type="atts">
     <desc xml:lang="en">Gestural domain attributes.</desc>
-  </classSpec>  
+  </classSpec>
   <classSpec ident="att.tabGrp.ges" module="MEI.gestural" type="atts">
     <desc xml:lang="en">Gestural domain attributes.</desc>
     <classes>
       <!-- Would that be helpful? <memberOf key="att.articulation.gestural"/>-->
-      <memberOf key="att.duration.ges"/>      
+      <memberOf key="att.duration.ges"/>
     </classes>
   </classSpec>
   <classSpec ident="att.tempo.ges" module="MEI.gestural" type="atts">
