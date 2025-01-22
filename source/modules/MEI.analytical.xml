@@ -100,7 +100,7 @@
     <desc xml:lang="en">Analytical domain attributes.</desc>
   </classSpec>
   <classSpec ident="att.course.anl" module="MEI.analytical" type="atts">
-    <desc xml:lang="en">Analytical domain attributes.</desc>    
+    <desc xml:lang="en">Analytical domain attributes.</desc>
   </classSpec>
   <classSpec ident="att.cpMark.anl" module="MEI.analytical" type="atts">
     <desc xml:lang="en">Analytical domain attributes.</desc>

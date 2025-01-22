@@ -2602,7 +2602,7 @@
           </datatype>
        </attDef>
     </attList>
-  </classSpec>   
+  </classSpec>
   <classSpec ident="att.placementRelEvent" module="MEI.shared" type="atts">
     <desc xml:lang="en">Attributes capturing placement information with respect to an event.</desc>
     <attList>
