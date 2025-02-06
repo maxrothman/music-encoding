@@ -211,13 +211,11 @@
     <content>
       <rng:choice>
         <rng:zeroOrMore>
-          <rng:choice>
-            <rng:text/>
-            <rng:ref name="model.editLike"/>
-            <rng:ref name="model.sylLike"/>
-            <rng:ref name="model.textPhraseLike"/>
-            <rng:ref name="model.transcriptionLike"/>
-          </rng:choice>
+          <rng:text/>
+          <rng:ref name="model.editLike"/>
+          <rng:ref name="model.sylLike"/>
+          <rng:ref name="model.textPhraseLike"/>
+          <rng:ref name="model.transcriptionLike"/>
         </rng:zeroOrMore>
       </rng:choice>
     </content>
