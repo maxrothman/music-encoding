@@ -3,13 +3,19 @@
       <mdiv>
          <score>
             <section>
-               <expansion plist="#shared.A #shared.B #shared.A"/>
+               <expansion plist="#shared.A #shared.B #shared.B1 #shared.B #shared.B2 #shared.A"/>
                <section xml:id="shared.A">
                   <!-- "A" section -->
                </section>
                <section xml:id="shared.B">
                   <!-- "B" section -->
                </section>
+               <ending xml:id="shared.B1">
+                  <!-- "B" first ending -->
+               </ending>
+               <ending xml:id="shared.B2">
+                  <!-- "B" second ending -->
+               </ending>
             </section>
          </score>
       </mdiv>
