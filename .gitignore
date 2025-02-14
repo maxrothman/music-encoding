@@ -1,9 +1,14 @@
 # build
 dist
 lib
+.ant-targets-build.xml
+build
 
 # macOS
 .DS_Store
+
 source/images/generatedLiveExamples/*
 node_modules
-/build
+
+# editor files
+.vscode
