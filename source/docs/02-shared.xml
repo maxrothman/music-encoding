@@ -384,13 +384,10 @@
                <head>General Music Elements</head>
                <p>This section lists the elements defined in the shared module that are available within the music element.</p>
                <div xml:id="sharedScoreAndParts" type="div3">
-                  <head>Score and Parts</head>
-                  <p>The following elements are provided for the capture of scores and parts:</p>
+                  <head>Score and Part Content</head>
+                  <p>The following elements are provided for capturing the content of scores and parts. The capturing of scores and parts themselves is discussed in section <ptr target="#sharedMdivContent"/>.</p>
                   <p>
                      <specList>
-                        <specDesc key="score"/>
-                        <specDesc key="parts"/>
-                        <specDesc key="part"/>
                         <specDesc key="scoreDef"/>
                         <specDesc key="staffDef"/>
                         <specDesc key="layerDef"/>
