@@ -9,9 +9,6 @@ source/images/generatedLiveExamples/*
 # macOS
 .DS_Store
 
-source/images/generatedLiveExamples/*
-node_modules
-
 # editor files
 .idea
 .vscode
