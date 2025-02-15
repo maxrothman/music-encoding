@@ -1,8 +1,10 @@
 # build
-dist
-lib
 .ant-targets-build.xml
 build
+dist
+lib
+node_modules
+source/images/generatedLiveExamples/*
 
 # macOS
 .DS_Store
