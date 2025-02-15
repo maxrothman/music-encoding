@@ -6,8 +6,9 @@ lib
 node_modules
 source/images/generatedLiveExamples/*
 
-# macOS
+# system files
 .DS_Store
+Thumbs.db
 
 # editor files
 .idea
