@@ -13,4 +13,5 @@ source/images/generatedLiveExamples/*
 node_modules
 
 # editor files
+.idea
 .vscode
